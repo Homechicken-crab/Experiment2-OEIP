@@ -1,0 +1,315 @@
+[警告: 名称不存在或不是目录: C:\Users\Lenovo\Desktop\m_map] 
+9.12.0.1884302 (R2022a)
+       Name: 'Image Processing Toolbox'
+    Version: '11.5'
+    Release: '(R2022a)'
+       Date: '13-Nov-2021'
+
+aerial_view_no_turb.tif: [480 480] uint8
+book.tif: [688 688] uint8
+    {'Agency FB'                      }
+    {'Algerian'                       }
+    {'AMGDT'                          }
+    {'Arial'                          }
+    {'Arial Black'                    }
+    {'Arial Narrow'                   }
+    {'Arial Rounded MT Bold'          }
+    {'AvantGarde'                     }
+    {'Bahnschrift'                    }
+    {'BankGothic Lt BT'               }
+    {'BankGothic Md BT'               }
+    {'Baskerville Old Face'           }
+    {'Bauhaus 93'                     }
+    {'Bell MT'                        }
+    {'Berlin Sans FB'                 }
+    {'Berlin Sans FB Demi'            }
+    {'Bernard MT Condensed'           }
+    {'Blackadder ITC'                 }
+    {'Bodoni MT'                      }
+    {'Bodoni MT Black'                }
+    {'Bodoni MT Condensed'            }
+    {'Bodoni MT Poster Compressed'    }
+    {'Book Antiqua'                   }
+    {'Bookman'                        }
+    {'Bookman Old Style'              }
+    {'Bradley Hand ITC'               }
+    {'Britannic Bold'                 }
+    {'Broadway'                       }
+    {'Brush Script MT'                }
+    {'Calibri'                        }
+    {'Calibri Light'                  }
+    {'Californian FB'                 }
+    {'Calisto MT'                     }
+    {'Cambria'                        }
+    {'Cambria Math'                   }
+    {'Candara'                        }
+    {'Candara Light'                  }
+    {'Castellar'                      }
+    {'Centaur'                        }
+    {'Century'                        }
+    {'Century Gothic'                 }
+    {'Century Schoolbook'             }
+    {'Chiller'                        }
+    {'Colonna MT'                     }
+    {'Comic Sans MS'                  }
+    {'CommercialScript BT'            }
+    {'Complex'                        }
+    {'Consolas'                       }
+    {'Constantia'                     }
+    {'Cooper Black'                   }
+    {'Copperplate Gothic Bold'        }
+    {'Copperplate Gothic Light'       }
+    {'Corbel'                         }
+    {'Corbel Light'                   }
+    {'Courier'                        }
+    {'Courier New'                    }
+    {'Curlz MT'                       }
+    {'Dialog'                         }
+    {'DialogInput'                    }
+    {'Dubai'                          }
+    {'Dubai Light'                    }
+    {'Dubai Medium'                   }
+    {'Dutch801 Rm BT'                 }
+    {'Dutch801 XBd BT'                }
+    {'Ebrima'                         }
+    {'Edwardian Script ITC'           }
+    {'Elephant'                       }
+    {'Engravers MT'                   }
+    {'Eras Bold ITC'                  }
+    {'Eras Demi ITC'                  }
+    {'Eras Light ITC'                 }
+    {'Eras Medium ITC'                }
+    {'Felix Titling'                  }
+    {'Footlight MT Light'             }
+    {'Forte'                          }
+    {'Franklin Gothic Book'           }
+    {'Franklin Gothic Demi'           }
+    {'Franklin Gothic Demi Cond'      }
+    {'Franklin Gothic Heavy'          }
+    {'Franklin Gothic Medium'         }
+    {'Franklin Gothic Medium Cond'    }
+    {'Freestyle Script'               }
+    {'French Script MT'               }
+    {'Gabriola'                       }
+    {'Gadugi'                         }
+    {'Garamond'                       }
+    {'GDT'                            }
+    {'GENISO'                         }
+    {'Georgia'                        }
+    {'Gigi'                           }
+    {'Gill Sans MT'                   }
+    {'Gill Sans MT Condensed'         }
+    {'Gill Sans MT Ext Condensed Bold'}
+    {'Gill Sans Ultra Bold'           }
+    {'Gill Sans Ultra Bold Condensed' }
+    {'Gloucester MT Extra Condensed'  }
+    {'GothicE'                        }
+    {'GothicG'                        }
+    {'GothicI'                        }
+    {'Goudy Old Style'                }
+    {'Goudy Stout'                    }
+    {'GreekC'                         }
+    {'GreekS'                         }
+    {'Haettenschweiler'               }
+    {'Harlow Solid Italic'            }
+    {'Harrington'                     }
+    {'Helvetica'                      }
+    {'Helvetica-Narrow'               }
+    {'High Tower Text'                }
+    {'Impact'                         }
+    {'Imprint MT Shadow'              }
+    {'Informal Roman'                 }
+    {'Ink Free'                       }
+    {'ISOCP'                          }
+    {'ISOCP2'                         }
+    {'ISOCP3'                         }
+    {'ISOCPEUR'                       }
+    {'ISOCT'                          }
+    {'ISOCT2'                         }
+    {'ISOCT3'                         }
+    {'ISOCTEUR'                       }
+    {'Italic'                         }
+    {'ItalicC'                        }
+    {'ItalicT'                        }
+    {'Javanese Text'                  }
+    {'Jokerman'                       }
+    {'Juice ITC'                      }
+    {'Kristen ITC'                    }
+    {'Kunstler Script'                }
+    {'Leelawadee UI'                  }
+    {'Leelawadee UI Semilight'        }
+    {'Lucida Bright'                  }
+    {'Lucida Calligraphy'             }
+    {'Lucida Console'                 }
+    {'Lucida Fax'                     }
+    {'Lucida Handwriting'             }
+    {'Lucida Sans'                    }
+    {'Lucida Sans Typewriter'         }
+    {'Lucida Sans Unicode'            }
+    {'Magneto'                        }
+    {'Maiandra GD'                    }
+    {'Malgun Gothic'                  }
+    {'Malgun Gothic Semilight'        }
+    {'Matura MT Script Capitals'      }
+    {'Microsoft Himalaya'             }
+    {'Microsoft JhengHei'             }
+    {'Microsoft JhengHei Light'       }
+    {'Microsoft JhengHei UI'          }
+    {'Microsoft JhengHei UI Light'    }
+    {'Microsoft New Tai Lue'          }
+    {'Microsoft PhagsPa'              }
+    {'Microsoft Sans Serif'           }
+    {'Microsoft Tai Le'               }
+    {'Microsoft YaHei UI'             }
+    {'Microsoft YaHei UI Light'       }
+    {'Microsoft Yi Baiti'             }
+    {'MingLiU-ExtB'                   }
+    {'MingLiU_HKSCS-ExtB'             }
+    {'MingLiU_MSCS-ExtB'              }
+    {'Mistral'                        }
+    {'Modern No. 20'                  }
+    {'Mongolian Baiti'                }
+    {'Monospac821 BT'                 }
+    {'Monospaced'                     }
+    {'Monotxt'                        }
+    {'Monotype Corsiva'               }
+    {'MS Gothic'                      }
+    {'MS PGothic'                     }
+    {'MS Reference Sans Serif'        }
+    {'MS UI Gothic'                   }
+    {'MV Boli'                        }
+    {'Myanmar Text'                   }
+    {'NewCenturySchoolBook'           }
+    {'Niagara Engraved'               }
+    {'Niagara Solid'                  }
+    {'Nirmala Text'                   }
+    {'Nirmala Text Semilight'         }
+    {'Nirmala UI'                     }
+    {'Nirmala UI Semilight'           }
+    {'Noto Sans SC'                   }
+    {'Noto Sans SC Medium'            }
+    {'Noto Serif SC'                  }
+    {'OCR A Extended'                 }
+    {'Old English Text MT'            }
+    {'Onyx'                           }
+    {'Palace Script MT'               }
+    {'Palatino'                       }
+    {'Palatino Linotype'              }
+    {'Papyrus'                        }
+    {'Parchment'                      }
+    {'Perpetua'                       }
+    {'Perpetua Titling MT'            }
+    {'Playbill'                       }
+    {'PMingLiU-ExtB'                  }
+    {'Poor Richard'                   }
+    {'Pristina'                       }
+    {'Proxy 1'                        }
+    {'Proxy 2'                        }
+    {'Proxy 3'                        }
+    {'Proxy 4'                        }
+    {'Proxy 5'                        }
+    {'Proxy 6'                        }
+    {'Proxy 7'                        }
+    {'Proxy 8'                        }
+    {'Proxy 9'                        }
+    {'Rage Italic'                    }
+    {'Ravie'                          }
+    {'Rockwell'                       }
+    {'Rockwell Condensed'             }
+    {'Rockwell Extra Bold'            }
+    {'RomanC'                         }
+    {'RomanD'                         }
+    {'RomanS'                         }
+    {'RomanT'                         }
+    {'Sans Serif Collection'          }
+    {'SansSerif'                      }
+    {'Script MT Bold'                 }
+    {'ScriptC'                        }
+    {'ScriptS'                        }
+    {'Segoe Print'                    }
+    {'Segoe Script'                   }
+    {'Segoe UI'                       }
+    {'Segoe UI Black'                 }
+    {'Segoe UI Emoji'                 }
+    {'Segoe UI Historic'              }
+    {'Segoe UI Light'                 }
+    {'Segoe UI Semibold'              }
+    {'Segoe UI Semilight'             }
+    {'Segoe UI Symbol'                }
+    {'Segoe UI Variable'              }
+    {'Serif'                          }
+    {'Showcard Gothic'                }
+    {'Simplex'                        }
+    {'SimSun-ExtB'                    }
+    {'SimSun-ExtG'                    }
+    {'Sitka Text'                     }
+    {'Snap ITC'                       }
+    {'Source Han Serif SC Heavy'      }
+    {'Stencil'                        }
+    {'Stylus BT'                      }
+    {'Swis721 BdCnOul BT'             }
+    {'Swis721 BdOul BT'               }
+    {'Swis721 Blk BT'                 }
+    {'Swis721 BlkCn BT'               }
+    {'Swis721 BlkEx BT'               }
+    {'Swis721 BlkOul BT'              }
+    {'Swis721 BT'                     }
+    {'Swis721 Cn BT'                  }
+    {'Swis721 Ex BT'                  }
+    {'Swis721 Lt BT'                  }
+    {'Swis721 LtCn BT'                }
+    {'Swis721 LtEx BT'                }
+    {'Syastro'                        }
+    {'Sylfaen'                        }
+    {'Symap'                          }
+    {'Symath'                         }
+    {'Symbol'                         }
+    {'Symeteo'                        }
+    {'Tahoma'                         }
+    {'Tempus Sans ITC'                }
+    {'Times'                          }
+    {'Times New Roman'                }
+    {'Trebuchet MS'                   }
+    {'Tw Cen MT'                      }
+    {'Tw Cen MT Condensed'            }
+    {'Tw Cen MT Condensed Extra Bold' }
+    {'Txt'                            }
+    {'Verdana'                        }
+    {'Viner Hand ITC'                 }
+    {'Vineta BT'                      }
+    {'Vivaldi'                        }
+    {'Vladimir Script'                }
+    {'Wide Latin'                     }
+    {'Yu Gothic'                      }
+    {'Yu Gothic Light'                }
+    {'Yu Gothic Medium'               }
+    {'Yu Gothic UI'                   }
+    {'Yu Gothic UI Light'             }
+    {'Yu Gothic UI Semibold'          }
+    {'Yu Gothic UI Semilight'         }
+    {'ZapfChancery'                   }
+    {'ZapfDingbats'                   }
+    {'仿宋'                           }
+    {'华文中宋'                        }
+    {'华文仿宋'                        }
+    {'华文宋体'                        }
+    {'华文彩云'                        }
+    {'华文新魏'                        }
+    {'华文楷体'                        }
+    {'华文琥珀'                        }
+    {'华文细黑'                        }
+    {'华文行楷'                        }
+    {'华文隶书'                        }
+    {'宋体'                           }
+    {'幼圆'                           }
+    {'微软雅黑'                        }
+    {'微软雅黑 Light'                  }
+    {'新宋体'                          }
+    {'方正姚体'                        }
+    {'方正舒体'                        }
+    {'楷体'                           }
+    {'等线'                           }
+    {'等线 Light'                     }
+    {'隶书'                           }
+    {'黑体'                           }
+

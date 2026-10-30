@@ -1,0 +1,8 @@
+*.m text eol=lf
+*.md text eol=lf
+*.csv text eol=lf
+*.png binary
+*.tif binary
+*.mat binary
+*.pdf binary
+materials/reference/* -text

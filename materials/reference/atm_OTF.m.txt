@@ -1,0 +1,11 @@
+function deg_filter = atm_OTF(P, Q, k)
+    %UNTITLED 此处显示有关此函数的摘要
+    %   此处显示详细说明
+    deg_filter = zeros(P, Q);
+    for i = 1:P
+        for j = 1:Q
+            deg_filter(i,j) = exp(-k * ((i - P/2)^2 + (j - Q/2)^2)^(5/6));
+        end
+    end        
+    
+end

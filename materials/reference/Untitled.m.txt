@@ -1,0 +1,29 @@
+clc;clear all;
+
+x = imread('aerial_view_no_turb.tif');
+%x = imread('book.tif');
+[m, n] = size(x);
+PQ = paddedsize(size(x));
+%PQ = size(x);
+
+X = fft2(x, PQ(1), PQ(2));
+Xc = fftshift(X); 
+
+k=0.0025;
+atm_filter = atm_OTF(PQ(1),PQ(2), k);
+X_deg = Xc .* atm_filter;
+X_deg = ifftshift(X_deg);
+x_deg = real(ifft2(X_deg));
+x_deg_xx = x_deg(1:m,1:n);
+x_deg_xxx = (x_deg_xx-min(min(x_deg_xx)))/(max(max(x_deg_xx))-min(min(x_deg_xx)));
+
+subplot(1,3,1);
+imshow(x);
+title('原始图像');
+subplot(1,3,2);
+imshow(atm_filter);
+title('退化模型');
+subplot(1,3,3);
+%imshow(x_deg(1:m,1:n),[]);
+imshow(uint8(x_deg_xxx*255));
+title('退化图像');

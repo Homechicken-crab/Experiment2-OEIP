@@ -1,0 +1,25 @@
+[警告: 名称不存在或不是目录: C:\Users\Lenovo\Desktop\m_map] 
+MATLAB 9.12.0.1884302 (R2022a)；核查时间 2026-10-30 15:13:33
+                   names                     errors      tolerances    passed
+    ___________________________________    __________    __________    ______
+
+    {'same_ideal_image'               }             0          0       true  
+    {'same_H'                         }             0          0       true  
+    {'same_noise'                     }             0          0       true  
+    {'same_g'                         }             0          0       true  
+    {'same_G'                         }             0          0       true  
+    {'degradation_full_grid'          }             0      1e-12       true  
+    {'noiseless_inverse'              }    1.0916e-11      1e-08       true  
+    {'full_inverse_formula'           }             0      1e-12       true  
+    {'amplitude_pseudoinverse_formula'}             0      1e-12       true  
+    {'wiener_K_0.0001'                }             0      1e-12       true  
+    {'wiener_K_0.001'                 }             0      1e-12       true  
+    {'wiener_K_0.01'                  }             0      1e-12       true  
+    {'turbulence_k_0.00025'           }             0      1e-12       true  
+    {'turbulence_k_0.001'             }             0      1e-12       true  
+    {'turbulence_k_0.0025'            }             0      1e-12       true  
+    {'motion_a_0.02_b_0.06'           }             0      1e-12       true  
+    {'motion_a_0.05_b_0'              }             0      1e-12       true  
+    {'motion_a_0.1_b_0.1'             }             0      1e-12       true  
+
+PASS：18 项数值核查，11 张组合图；三种复原的 I、H、noise、g、G 完全一致。
