@@ -1,4 +1,4 @@
-%% 读取图像并设置保存位置
+%% 读取图像
 clear;
 root = fileparts(fileparts(mfilename('fullpath')));
 out = fullfile(root, 'results', 'motion');
@@ -10,39 +10,36 @@ I = imread(fullfile(root, 'images', 'book.tif'));
 if size(I, 3) == 3
     I = rgb2gray(I);
 end
-I = im2double(I); % 转为 [0,1] 双精度
+I = im2double(I);
 [M, N] = size(I);
 
-%% 设置补零尺寸与中心化频率坐标
-% 原图放在左上角；完整网格参与运算，最后取 1:M、1:N。
-% 使用奇数网格，运动 OTF 无单独的 Nyquist 行列，便于保持共轭对称。
+%% 设置频率坐标
 P = 2*M + 1;
 Q = 2*N + 1;
-u = -floor(Q/2):floor(Q/2); % 水平频率索引，对应列
-v = -floor(P/2):floor(P/2); % 垂直频率索引，对应行
+u = -floor(Q/2):floor(Q/2);
+v = -floor(P/2):floor(P/2);
 [U, V] = meshgrid(u, v);
 F = fftshift(fft2(I, P, Q));
 
-%% 按匀速直线运动公式生成 OTF
+%% 运动退化模型
 T = 1;
-ab_values = [0.1 0.1; 0.05 0; 0.02 0.06]; % 对角、水平、偏垂直运动
+ab_values = [0.1 0.1; 0.05 0; 0.02 0.06];
 for index = 1:size(ab_values, 1)
     a = ab_values(index, 1);
     b = ab_values(index, 2);
     S = a*U + b*V;
-    H = T * ones(P, Q);
+    H = T * ones(P, Q); % S=0 时 H=T
     nonzero = (S ~= 0);
     H(nonzero) = T * sin(pi*S(nonzero)) ./ (pi*S(nonzero)) ...
         .* exp(-1i*pi*S(nonzero));
-    % S=0 时按极限 H=T 处理，不对整幅 H 取实部或幅度来退化。
 
-    %% 频域相乘，反中心化后逆变换
+    %% 运动模糊
     g_complex = ifft2(ifftshift(F .* H));
     g = real(g_complex);
     J = g(1:M, 1:N);
     mse_value = mean((J(:)-I(:)).^2);
 
-    %% 显示复数 OTF 的幅度和退化结果
+    %% 显示并保存结果
     f = figure('Visible', 'off', 'Color', 'w', 'Position', [80 80 1560 620], ...
         'DefaultAxesFontName', 'Microsoft YaHei', 'DefaultTextFontName', 'Microsoft YaHei', ...
         'DefaultAxesFontSize', 12, 'DefaultTextFontSize', 13);

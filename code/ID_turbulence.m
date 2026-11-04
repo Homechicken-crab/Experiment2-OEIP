@@ -1,4 +1,4 @@
-%% 读取图像并设置保存位置
+%% 读取图像
 clear;
 root = fileparts(fileparts(mfilename('fullpath')));
 out = fullfile(root, 'results', 'turbulence');
@@ -10,21 +10,19 @@ I = imread(fullfile(root, 'images', 'aerial_view_no_turb.tif'));
 if size(I, 3) == 3
     I = rgb2gray(I);
 end
-I = im2double(I); % 转为 [0,1] 双精度
+I = im2double(I);
 [M, N] = size(I);
 
-%% 设置补零尺寸与中心化频率坐标
-% 原图放在左上角；完整网格参与运算，最后取 1:M、1:N。
-% 奇数网格的带符号频率坐标关于零频对称。
+%% 设置频率坐标
 P = 2*M + 1;
 Q = 2*N + 1;
-u = -floor(Q/2):floor(Q/2); % 水平频率索引，对应列
-v = -floor(P/2):floor(P/2); % 垂直频率索引，对应行
+u = -floor(Q/2):floor(Q/2);
+v = -floor(P/2):floor(P/2);
 [U, V] = meshgrid(u, v);
 F = fftshift(fft2(I, P, Q));
 
-%% 按指导书公式生成大气湍流 OTF 并退化
-k_values = [0.0025 0.001 0.00025]; % k 越大，退化越严重
+%% 大气湍流退化
+k_values = [0.0025 0.001 0.00025];
 for index = 1:numel(k_values)
     k = k_values(index);
     H = exp(-k * (U.^2 + V.^2).^(5/6));
@@ -33,7 +31,7 @@ for index = 1:numel(k_values)
     J = g(1:M, 1:N);
     mse_value = mean((J(:)-I(:)).^2);
 
-    %% 显示原图、模型和退化图
+    %% 显示并保存结果
     f = figure('Visible', 'off', 'Color', 'w', 'Position', [80 80 1560 620], ...
         'DefaultAxesFontName', 'Microsoft YaHei', 'DefaultTextFontName', 'Microsoft YaHei', ...
         'DefaultAxesFontSize', 12, 'DefaultTextFontSize', 13);

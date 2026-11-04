@@ -1,4 +1,4 @@
-%% 读取图像并设置保存位置
+%% 读取图像
 clear;
 root = fileparts(fileparts(mfilename('fullpath')));
 out = fullfile(root, 'results', 'pseudoinverse');
@@ -10,46 +10,44 @@ I = imread(fullfile(root, 'images', 'aerial_view_no_turb.tif'));
 if size(I, 3) == 3
     I = rgb2gray(I);
 end
-I = im2double(I); % 转为 [0,1] 双精度
+I = im2double(I);
 [M, N] = size(I);
 
-%% 设置补零尺寸与中心化频率坐标
-% 原图放在左上角；完整网格参与运算，最后取 1:M、1:N。
-% 奇数网格的带符号频率坐标关于零频对称。
+%% 设置频率坐标
 P = 2*M + 1;
 Q = 2*N + 1;
-u = -floor(Q/2):floor(Q/2); % 水平频率索引，对应列
-v = -floor(P/2):floor(P/2); % 垂直频率索引，对应行
+u = -floor(Q/2):floor(Q/2);
+v = -floor(P/2):floor(P/2);
 [U, V] = meshgrid(u, v);
 F = fftshift(fft2(I, P, Q));
 
-%% 构造三种复原共用的模糊与噪声模型
-k = 0.00025; % 湍流参数，小写 k
+%% 模糊与加噪
+k = 0.00025;
 seed = 20261030;
 noise_mean = 0;
-noise_variance = 0.0001; % 输入灰度以 [0,1] 为单位，标准差 0.01
+noise_variance = 0.0001; % 高斯噪声方差
 H = exp(-k * (U.^2 + V.^2).^(5/6));
 blurred_complex = ifft2(ifftshift(F .* H));
 blurred = real(blurred_complex);
 rng(seed, 'twister');
 noise = noise_mean + sqrt(noise_variance)*randn(P, Q);
-g = blurred + noise; % 对整个补零网格加噪，保留原始浮点数据，不截断
-G = fftshift(fft2(g)); % 不能先裁剪 g 再进行复原
-degraded = g(1:M, 1:N); % 此裁剪仅用于显示，不用于构造 G
+g = blurred + noise;
+G = fftshift(fft2(g));
+degraded = g(1:M, 1:N);
 mse_degraded = mean((degraded(:)-I(:)).^2);
 
-%% 伪逆滤波：严格采用指导书式（5）的幅度阈值
-threshold = 0.08; % |H| >= threshold 时求逆，否则置零
+%% 伪逆滤波
+threshold = 0.08; % 幅度阈值
 mask = abs(H) >= threshold;
 inverse_filter = zeros(P, Q);
 inverse_filter(mask) = 1 ./ H(mask);
 F_hat = inverse_filter .* G;
 restored_complex = ifft2(ifftshift(F_hat));
 J_full = real(restored_complex);
-J = J_full(1:M, 1:N);
+J = J_full(1:M, 1:N); % 复原后再裁剪
 
-%% 使用未归一化、未截断的浮点数据计算误差
-difference = J-I; % 有符号差值：复原结果减去理想图像
+%% 计算误差
+difference = J-I;
 mse_restored = mean(difference(:).^2);
 outside_fraction = mean(J(:)<0 | J(:)>1);
 value_range = [min(J(:)) max(J(:))];
